@@ -12,6 +12,16 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: false|
+|image|string|null: false|
+|uer_id|integer|null:false, foreign_key: true|
+|group_id|integer|null:false, foreign_key: true|
+### Association
+- belongs_to :user
+- belings_to :group
 
 * Database initialization
 
