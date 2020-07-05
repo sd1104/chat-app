@@ -32,3 +32,14 @@
 ### Association
 - has_many :messages
 - has_many :users, through: :groups_users
+
+
+## groups_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null:false, foreign_key: true|
+|user_id|integer|null:false, foreign_key: true|
+
+### Association
+- has_many :groups
+- has_many :users
