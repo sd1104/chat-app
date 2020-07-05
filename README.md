@@ -43,5 +43,5 @@
 |user_id|integer|null:false, foreign_key: true|
 
 ### Association
-- has_many :groups
-- has_many :users
+- belongs_to :groups
+- belongs_to :users
