@@ -27,7 +27,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false, unique:true|
-|user_id|integer|null:false, foreign_key: true|
 
 ### Association
 - has_many :messages
