@@ -1,6 +1,11 @@
 .Side-bar
   .Side-bar__user-name
     .Side-bar__user-name__top-items
-      .Side-bar__user-name__top-items__name
-      .Side-bar__user-name__top-items__icons
-  .Side-bar__group-list
+      .Side-bar__user-name__top-items__name masa
+      %ul.Side-bar__user-name__top-items__bts 
+        %li.Side-bar__user-name__top-items__icons__btns__btn
+        = link_to "#" do
+          = icon('fas', 'edit')
+        %li.Side-bar__user-name__top-items__icons__btns__btn
+        = link_to "#" do
+          = icon('fas', 'cog')

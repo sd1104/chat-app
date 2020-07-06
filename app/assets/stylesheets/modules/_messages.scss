@@ -23,8 +23,16 @@
         &__name {
           width: calc(100% - 60px);
         }
-        &__icons {
+        &__bts {
           width: 60px;
+          display: flex;
+          justify-content: flex-start;
+          %li {
+            color: red;
+          }
+          %li {
+            color: red;
+          }
         }
       }
     }
