@@ -18,6 +18,14 @@
         height: 20px;
         width: 260px;
         background-color: #d8d8d8;
+        display: flex;
+        justify-content: space-between;
+        &__name {
+          width: calc(100% - 60px);
+        }
+        &__icons {
+          width: 60px;
+        }
       }
     }
     &__group-list {
