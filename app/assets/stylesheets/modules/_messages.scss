@@ -25,12 +25,13 @@
         }
         &__bts {
           width: 60px;
+          list-style: none;
           display: flex;
           justify-content: flex-start;
-          %li {
+          &__btn {
             color: red;
           }
-          %li {
+          &__btn {
             color: red;
           }
         }
