@@ -17,11 +17,11 @@
       &__top-items {
         height: 20px;
         width: 260px;
-        background-color: #d8d8d8;
         display: flex;
         justify-content: space-between;
         &__name {
           width: calc(100% - 60px);
+          color: #ffffff;
         }
         &__btns {
           list-style: none;
@@ -31,7 +31,7 @@
           a {
             text-decoration: none;
             .icon {
-              color: white;
+              color: #ffffff;
               margin-left: 5px;
             }
           }
