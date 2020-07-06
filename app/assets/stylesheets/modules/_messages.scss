@@ -21,6 +21,7 @@
         justify-content: space-between;
         &__name {
           width: calc(100% - 60px);
+          font-size: 16px;
           color: #ffffff;
         }
         &__btns {
@@ -41,6 +42,20 @@
     &__group-list {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
+      &__group-box {
+        padding: 20px 20px 0 20px;
+        &__group-name {
+          font-size: 15px;
+          color: #ffffff;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        &__group-status {
+          font-size: 11px;
+          font-weight: bold;
+          color: #ffffff;
+        }
+      }
     }
   }
 
@@ -51,6 +66,36 @@
       height: 100px;
       background-color: #ffffff;
       border-bottom: 1px solid #eeeeee;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      &__chat-header {
+        &__Group-name {
+          font-size: 20px;
+          color: #333333;
+          margin: 35px 0 15px 0;
+        }
+        &__group-member {
+          font-size: 12px;
+          color: #999999;
+          list-style: none;
+          display: flex;
+          &__member {
+            font-size: 12px;
+            color: #999999;
+          }
+        }
+      }
+      .edit-btn {
+        height: 40px;
+        color: #38aef0;
+        margin-top: 28px;
+        padding: 0 20px;
+        border: 1px solid #38aef0;
+        display: block;
+        line-height: 40px;
+        text-decoration: none;
+      }
     }
     &__message-list {
       height: calc(100vh - 100px - 90px);

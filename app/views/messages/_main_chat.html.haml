@@ -1,4 +1,12 @@
 .Chat-main
   .Chat-main__group-info
+    .Chat-main__group-info__chat-header
+      .Chat-main__group-info__chat-header__Group-name test
+      %ul.Chat-main__group-info__chat-header__group-member
+        Member：
+        %li.Chat-main__group-info__chat-header__group-member__member john
+        %li.Chat-main__group-info__chat-header__group-member__member &nbsp; sabu
+    = link_to "#", class:'edit-btn' do
+      Edit
   .Chat-main__message-list
   .Chat-main__message-form
