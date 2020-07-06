@@ -100,6 +100,23 @@
     &__message-list {
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
+      &__message-box {
+        padding: 35px 0 0 40px;
+        &__sender {
+          color: #333333;
+          font-size: 16px;
+          margin-bottom: 12px;
+          span {
+            color: #999999;
+            font-size: 12px;
+          }
+        }
+        &__message {
+          color: #434A54;
+          font-size: 14px;
+          margin-bottom: 46px;
+        }
+      }
     }
     &__message-form {
       height: 90px;
