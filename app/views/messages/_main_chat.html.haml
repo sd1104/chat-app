@@ -8,6 +8,7 @@
         %li.Chat-main__group-info__chat-header__group-member__member &nbsp; sabu
     = link_to "#", class:'edit-btn' do
       Edit
+
   .Chat-main__message-list
     .Chat-main__message-list__message-box
       .Chat-main__message-list__message-box__sender
@@ -15,4 +16,11 @@
         %span 2019/11/20(Wed) 17:43:01
       .Chat-main__message-list__message-box__message
         おはよう！
+
   .Chat-main__message-form
+    = form_with url: "/" do |form|
+      .Chat-main__message-form__messageInput
+        = form.text_field :message, placeholder: "type a message", class: "textInput"
+        %label.imageInput(for="image-btn")
+          =icon('far', 'image', class: "image-btn")
+      = form.submit "Send", class: "submit-btn"
