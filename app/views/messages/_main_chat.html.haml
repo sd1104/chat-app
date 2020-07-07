@@ -3,7 +3,7 @@
     .Chat-main__group-info__chat-header
       .Chat-main__group-info__chat-header__Group-name test
       %ul.Chat-main__group-info__chat-header__group-member
-        Member：
+        %p Member：
         %li.Chat-main__group-info__chat-header__group-member__member john
         %li.Chat-main__group-info__chat-header__group-member__member &nbsp; sabu
     = link_to "#", class:'edit-btn' do
@@ -19,8 +19,9 @@
 
   .Chat-main__message-form
     = form_with url: "/" do |form|
-      .Chat-main__message-form__messageInput
+      .Chat-main__message-form__leftInput
         = form.text_field :message, placeholder: "type a message", class: "textInput"
-        %label.imageInput(for="image-btn")
-          =icon('far', 'image', class: "image-btn")
+        %label{class: "imageInput"}
+          = icon('far', 'image', class: "image-btn")
+          %input{type: "file", class:"file-select"}
       = form.submit "Send", class: "submit-btn"

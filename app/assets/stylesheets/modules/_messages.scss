@@ -121,6 +121,47 @@
     &__message-form {
       height: 90px;
       background-color: #d2d2d2;
+      display: flex;
+      align-items: center;
+      padding: 0 40px 0 50px;
+      form{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .Chat-main__message-form__leftInput {
+          width: 100%;
+          display: flex;
+          background-color: #fff;
+          align-items: center;
+          position: relative;
+          .textInput {
+            height: 50px;
+            width: 100%;
+            padding: 0 10px;
+            border: none;
+            line-height: 50px;
+          }
+          .imageInput {
+            position: absolute;
+            right: 10px;
+            .image-btn {
+              font-size: 25px;
+            }
+            .file-select {
+              display: none;
+            }
+          }
+        }
+        .submit-btn {
+          background-color: #38aef0;
+          color: #fff;
+          line-height: 50px;
+          padding: 0 30px;
+          border: none;
+          margin-left: 15px;
+        }
+      }
     }
   }
 }
