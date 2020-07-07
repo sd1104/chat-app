@@ -31,7 +31,10 @@
           align-items: center;
           a {
             text-decoration: none;
-            .icon {
+            .fa-edit {
+              color: #ffffff;
+            }
+            .fa-cog { 
               color: #ffffff;
               margin-left: 5px;
             }
@@ -145,7 +148,7 @@
           .imageInput {
             position: absolute;
             right: 10px;
-            .image-btn {
+            .fa-image {
               font-size: 25px;
             }
             .file-select {
