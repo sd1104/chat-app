@@ -19,19 +19,19 @@
 
 ### Association
 - has_many :messages
-- has_many :groups, through: :groups_users
-- has_many :groups_users
+- has_many :groups, through: :group_users
+- has_many :group_users
 
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false, unique:true|
+|name|string|null:false, unique:true, index:true|
 
 ### Association
 - has_many :messages
-- has_many :users, through: :groups_users
-- has_many :groups_users
+- has_many :users, through: :group_users
+- has_many :group_users
 
 
 ## groups_usersテーブル
