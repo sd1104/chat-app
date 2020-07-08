@@ -10,10 +10,12 @@
         %li.Side-bar__user-name__top-items__btns__btn
         = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
+
   .Side-bar__group-list
-    .Side-bar__group-list__group-box
-      .Side-bar__group-list__group-box__group-name techcamp
-      .Side-bar__group-list__group-box__group-status まだメッセージがありません
-    .Side-bar__group-list__group-box
-      .Side-bar__group-list__group-box__group-name john-sabu
-      .Side-bar__group-list__group-box__group-status まだメッセージがありません
+    - current_user.groups.each do |g|
+      .Side-bar__group-list__group-box
+        = link_to '#' do
+          .Side-bar__group-list__group-box__group-name
+            = g.name
+          .Side-bar__group-list__group-box__group-status
+            まだメッセージがありません
