@@ -1,13 +1,14 @@
 .Side-bar
   .Side-bar__user-name
     .Side-bar__user-name__top-items
-      .Side-bar__user-name__top-items__name masa
+      .Side-bar__user-name__top-items__name 
+        = current_user.name
       %ul.Side-bar__user-name__top-items__btns 
         %li.Side-bar__user-name__top-items__btns__btn
         = link_to "#" do
           %i.fa.fa-edit
         %li.Side-bar__user-name__top-items__btns__btn
-        = link_to "#" do
+        = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
   .Side-bar__group-list
     .Side-bar__group-list__group-box
