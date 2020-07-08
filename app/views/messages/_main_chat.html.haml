@@ -1,26 +1,24 @@
 .Chat-main
   .Chat-main__group-info
     .Chat-main__group-info__chat-header
-      .Chat-main__group-info__chat-header__Group-name test
+      .Chat-main__group-info__chat-header__Group-name
+        = @group.name
       %ul.Chat-main__group-info__chat-header__group-member
         Member：
-        %li.Chat-main__group-info__chat-header__group-member__member john
-        %li.Chat-main__group-info__chat-header__group-member__member &nbsp; sabu
-    = link_to "#", class:'edit-btn' do
+        - @group.users.each do |g|
+          %li.Chat-main__group-info__chat-header__group-member__member
+            &nbsp;
+            = g.name
+    = link_to edit_group_path(current_user), class:'edit-btn' do
       Edit
 
   .Chat-main__message-list
-    .Chat-main__message-list__message-box
-      .Chat-main__message-list__message-box__sender
-        masa &nbsp; 
-        %span 2019/11/20(Wed) 17:43:01
-      .Chat-main__message-list__message-box__message
-        おはよう！
+    = render partial: 'message', collection: @messages
 
   .Chat-main__message-form
-    = form_with url: "/" do |form|
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |form|
       .Chat-main__message-form__leftInput
-        = form.text_field :message, placeholder: "type a message", class: "textInput"
+        = form.text_field :body, placeholder: "type a message", class: "textInput"
         = form.label :image, class: "imageInput" do
           %i.fa.fa-image
           = form.file_field :image, class:"file-select"

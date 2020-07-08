@@ -107,18 +107,25 @@
       &__message-box {
         padding: 35px 0 0 40px;
         &__sender {
+          margin-bottom: 12px;
+          display:flex;
+          justify-content: flex-start;
+          align-items: center;
+          &__sender-name {
           color: #333333;
           font-size: 16px;
-          margin-bottom: 12px;
-          span {
+          }
+          &__date {
             color: #999999;
             font-size: 12px;
           }
         }
         &__message {
-          color: #434A54;
-          font-size: 14px;
-          margin-bottom: 46px;
+          &__body {
+            color: #434A54;
+            font-size: 14px;
+            margin-bottom: 46px;
+          }
         }
       }
     }
