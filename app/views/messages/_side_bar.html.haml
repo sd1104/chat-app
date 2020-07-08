@@ -5,7 +5,7 @@
         = current_user.name
       %ul.Side-bar__user-name__top-items__btns 
         %li.Side-bar__user-name__top-items__btns__btn
-        = link_to "#" do
+        = link_to new_group_path do
           %i.fa.fa-edit
         %li.Side-bar__user-name__top-items__btns__btn
         = link_to edit_user_path(current_user) do
