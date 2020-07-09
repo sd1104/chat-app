@@ -48,16 +48,19 @@
       background-color: #2f3e51;
       &__group-box {
         padding: 20px 0px 40px 0;
-        &__group-name {
-          font-size: 15px;
-          color: #ffffff;
-          font-weight: bold;
-          margin-bottom: 5px;
-        }
-        &__group-status {
-          font-size: 11px;
-          font-weight: bold;
-          color: #ffffff;
+        a {
+          text-decoration: none;
+          .Side-bar__group-list__group-box__group-name {
+            font-size: 15px;
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+          .Side-bar__group-list__group-box__group-status {
+            font-size: 11px;
+            font-weight: bold;
+            color: #ffffff;
+          }
         }
       }
     }
@@ -104,8 +107,9 @@
     &__message-list {
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
+      padding: 35px 0 0 40px;
       &__message-box {
-        padding: 35px 0 0 40px;
+        margin-bottom: 46px;
         &__sender {
           margin-bottom: 12px;
           display:flex;
@@ -124,7 +128,6 @@
           &__body {
             color: #434A54;
             font-size: 14px;
-            margin-bottom: 46px;
           }
         }
       }
