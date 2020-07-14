@@ -1,7 +1,8 @@
 $(function(){
+
   function buildHTML(message){
     if(message.image){
-      let html = `<div class="Chat-main__message-list__message-box">
+      let html = `<div class="Chat-main__message-list__message-box" data-message-id=${message.id}>
                     <div class="Chat-main__message-list__message-box__sender">
                       <div class="Chat-main__message-list__message-box__sender__sender-name">
                         ${message.user_name}
@@ -20,7 +21,7 @@ $(function(){
                   </div>`
       return html;
     } else {
-      let html = `<div class="Chat-main__message-list__message-box">
+      let html = `<div class="Chat-main__message-list__message-box" data-message-id=${message.id}>
                     <div class="Chat-main__message-list__message-box__sender">
                       <div class="Chat-main__message-list__message-box__sender__sender-name">
                         ${message.user_name}
@@ -44,7 +45,6 @@ $(function(){
     e.preventDefault();
     let formData = new FormData(this);
     let url = $(this).attr('action');
-
     $.ajax({
       url: url,
       type: "POST",
@@ -53,7 +53,6 @@ $(function(){
       processData: false,
       contentType: false
     })
-
     .done(function(data){
       let html = buildHTML(data);
       $('.Chat-main__message-list').append(html);
@@ -61,9 +60,9 @@ $(function(){
       $('#new_message')[0].reset();
       $('.submit-btn').prop('disabled', false);
     })
-
     .fail(function(){
       alert('error');
     })
   })
+
 });
