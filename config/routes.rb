@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root "groups#index"
   resources :groups, only: [:index, :new, :create, :edit, :update] do
     resources :messages, only: [:index, :create]
+    namespace :api do
+      resources :messages, only: :index, defaults: { format: 'json' }
+    end
   end
   resources :users, only: [:index, :edit, :update]
+  
 end
