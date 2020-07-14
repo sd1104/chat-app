@@ -4,7 +4,7 @@
       = message.user.name
       &nbsp; 
     .Chat-main__message-list__message-box__sender__date
-      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      = message.created_at.to_s(:datetime)
   .Chat-main__message-list__message-box__message
     - if message.body.present?
       %p.Chat-main__message-list__message-box__message__body
