@@ -2,17 +2,38 @@
   box-sizing: border-box;
 }
 
+
+// カラーの変数定義
+$white1: #ffffff;
+$white2: #fff;
+$white3: #eeeeee;
+$black1: #253142;
+$black2: #333333;
+$gray1: #999999;
+$blue1: #38aef0;
+
+// スクロール設定
+@mixin scroll-y {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+// ディスプレイフレックス y軸center
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
 .wrapper {
   height: 100vh;
   display: flex;
   .Side-bar {
     width: 300px;
-    background-color: #253142;
+    background-color: $black1;
     &__user-name {
       height: 100px;
-      background-color: #253141;
-      display: flex;
-      align-items: center;
+      background-color: $black2;
+      @include flex-align-center();
       padding: 0 20px;
       &__top-items {
         height: 20px;
@@ -22,20 +43,20 @@
         &__name {
           width: calc(100% - 60px);
           font-size: 16px;
-          color: #ffffff;
+          color: $white1;
         }
         &__btns {
           list-style: none;
           display: flex;
-          justify-content: flex-end;
           align-items: center;
+          justify-content: flex-end;
           a {
             text-decoration: none;
             .fa-edit {
-              color: #ffffff;
+              color: $white1;
             }
             .fa-cog { 
-              color: #ffffff;
+              color: $white1;
               margin-left: 5px;
             }
           }
@@ -43,8 +64,7 @@
       }
     } 
     &__group-list {
-      overflow: hidden;
-      overflow-y: scroll;
+      @include scroll-y();
       height: calc(100vh - 100px);
       padding: 0 20px;
       background-color: #2f3e51;
@@ -54,14 +74,14 @@
           text-decoration: none;
           .Side-bar__group-list__group-box__group-name {
             font-size: 15px;
-            color: #ffffff;
+            color: $white1;
             font-weight: bold;
             margin-bottom: 5px;
           }
           .Side-bar__group-list__group-box__group-status {
             font-size: 11px;
             font-weight: bold;
-            color: #ffffff;
+            color: $white1;
           }
         }
       }
@@ -70,45 +90,44 @@
 
   .Chat-main {
     width: calc(100vw - 300px);
-    background-color: #ffffff;
+    background-color: $white1;
     &__group-info {
       height: 100px;
-      background-color: #ffffff;
-      border-bottom: 1px solid #eeeeee;
+      background-color: $white1;
+      border-bottom: 1px solid $white3;
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
       &__chat-header {
         &__Group-name {
           font-size: 20px;
-          color: #333333;
+          color: $black2;
           margin: 35px 0 15px 0;
         }
         &__group-member {
           font-size: 12px;
-          color: #999999;
+          color: $gray1;
           list-style: none;
           display: flex;
           &__member {
             font-size: 12px;
-            color: #999999;
+            color: $gray1;
           }
         }
       }
       .edit-btn {
         height: 40px;
-        color: #38aef0;
+        color: $blue1;
         margin-top: 28px;
         padding: 0 20px;
-        border: 1px solid #38aef0;
+        border: 1px solid $blue1;
         display: block;
         line-height: 40px;
         text-decoration: none;
       }
     }
     &__message-list {
-      overflow: hidden;
-      overflow-y: scroll;
+      @include scroll-y();
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
       padding: 35px 0 0 40px;
@@ -120,11 +139,11 @@
           justify-content: flex-start;
           align-items: center;
           &__sender-name {
-          color: #333333;
+          color: $black2;
           font-size: 16px;
           }
           &__date {
-            color: #999999;
+            color: $gray1;
             font-size: 12px;
           }
         }
@@ -139,8 +158,7 @@
     &__message-form {
       height: 90px;
       background-color: #d2d2d2;
-      display: flex;
-      align-items: center;
+      @include flex-align-center();
       padding: 0 40px 0 50px;
       form{
         width: 100%;
@@ -149,9 +167,8 @@
         align-items: center;
         .Chat-main__message-form__leftInput {
           width: 100%;
-          display: flex;
-          background-color: #fff;
-          align-items: center;
+          background-color: $white2;
+          @include flex-align-center();
           position: relative;
           .textInput {
             height: 50px;
@@ -172,8 +189,8 @@
           }
         }
         .submit-btn {
-          background-color: #38aef0;
-          color: #fff;
+          background-color: $blue1;
+          color: $white2;
           line-height: 50px;
           padding: 0 30px;
           border: none;
