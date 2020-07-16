@@ -45,9 +45,9 @@ $(function() {
           addUser(user);
         });
       } else if (input.length == 0) {
-        return false;
+          return false;
       } else {
-        addNoUser();
+          addNoUser();
       }
     })
     .fail(function() {
